@@ -39,7 +39,7 @@ var fileNames = fs.readdirSync(sourceDir);
 fileNames = fileNames.filter(function(fileName) { return fileName.match(/.*\.md$/); });
 console.log('compiling: ', fileNames.length, 'files');
 fileNames.forEach(function(fileName) {
-  let content = fs.readFileSync(sourceDir + fileName, 'utf-8') || '';
+  let content = fs.readFileSync(path.join(sourceDir, fileName), 'utf-8') || '';
   let parsedContent = metaMarked(content);
   if (parsedContent && parsedContent.meta && parsedContent.meta.type && events[parsedContent.meta.type]) {
     events[parsedContent.meta.type].push(parsedContent);
