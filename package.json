@@ -1,5 +1,5 @@
 {
-  "name": "mathingr_generator",
+  "name": "gr-math-events-md2json",
   "version": "0.0.1",
   "description": "A simple script that parses markdown files with yaml metadata and creates a json file. Also supports LaTeX math types",
   "author": "Kostas <i@oranger.me>",
